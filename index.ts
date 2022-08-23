@@ -1,6 +1,8 @@
 // Import stylesheets
 import './style.css';
 import { Cookie } from './models/Cookie';
+import { SprinkleCookie } from './models/Cookie';
+import { Colours } from './models/Cookie';
 
 // Create a array/list of cookies named cookies
 let cookies: Cookie[] = [];
@@ -18,7 +20,7 @@ function init() {
   cookies.push(Cookie1, Cookie2);
 
   // add them as options in the select/dropdown (cookieSelector) element
-  let addCookieOption;
+  let addCookieOption: string;
   for (let i in cookies) {
     addCookieOption += `<option value="${cookies[i].name}">${cookies[i].name}</option>`;
   }
@@ -48,8 +50,10 @@ function drawCookies() {
 
 //TODO: this function needs to be triggered by button changeColour-btn
 // upon pressing the button it should change the colour of the cookie selected in the dropdown to the colour typed in the input element (cookieColour-inp)
-const changeColourBtn: HTMLButtonElement = <HTMLButtonElement>document.getElementById('changeColour-btn');
-changeColourBtn.addEventListener('click', changeColour)
+const changeColourBtn: HTMLButtonElement = <HTMLButtonElement>(
+  document.getElementById('changeColour-btn')
+);
+changeColourBtn.addEventListener('click', changeColour);
 
 function changeColour() {
   let cookieColourInput = (
@@ -58,9 +62,9 @@ function changeColour() {
   let cookieSelectorValue = (
     document.getElementById('cookieSelector') as HTMLInputElement
   ).value;
-  
-  for(let i: number = 0; i < cookies.length; i++) {
-    if(cookieSelectorValue === `Cookie${i + 1}`) {
+
+  for (let i: number = 0; i < cookies.length; i++) {
+    if (cookieSelectorValue === `Cookie${i + 1}`) {
       cookies[i].colour = cookieColourInput;
       break;
     }
@@ -71,16 +75,18 @@ function changeColour() {
 
 //TODO: this function needs to be triggered by button addChocolateChip-btn
 // upon pressing the button it should add a chocolate chip to cookies selected from the dropdown
-const addChocolateChipBtn: HTMLButtonElement = <HTMLButtonElement>document.getElementById('addChocolateChip-btn');
-addChocolateChipBtn.addEventListener('click', addChocolateChip)
+const addChocolateChipBtn: HTMLButtonElement = <HTMLButtonElement>(
+  document.getElementById('addChocolateChip-btn')
+);
+addChocolateChipBtn.addEventListener('click', addChocolateChip);
 
 function addChocolateChip() {
   let cookieSelectorValue = (
     document.getElementById('cookieSelector') as HTMLInputElement
   ).value;
 
-  for(let i: number = 0; i < cookies.length; i++) {
-    if(cookieSelectorValue === `Cookie${i + 1}`) {
+  for (let i: number = 0; i < cookies.length; i++) {
+    if (cookieSelectorValue === `Cookie${i + 1}`) {
       cookies[i].chocolateChipNum++;
       break;
     }
