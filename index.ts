@@ -97,3 +97,5 @@ function addChocolateChip() {
 function updateDisplay() {
   drawCookies();
 }
+
+function createNewCookie() {}
