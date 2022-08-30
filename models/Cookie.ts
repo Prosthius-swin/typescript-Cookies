@@ -1,9 +1,9 @@
 export enum Colours {
-  Brown,
-  White,
-  Black,
-  Pink,
-  Blue,
+  Brown = 'brown',
+  White = 'white',
+  Black = 'black',
+  Pink = 'pink',
+  Blue = 'blue',
 }
 
 export class Cookie {
@@ -29,7 +29,7 @@ export class SprinkleCookie {
 
   constructor(_name: string) {
     this.name = _name;
-    this.colour = Colours.Brown;
+    this.colour = Colours.Black;
     this.chocolateChipNum = 0;
   }
 }
