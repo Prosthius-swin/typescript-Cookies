@@ -1,4 +1,4 @@
-import { Colours } from './models/Colours';
+import { Colours } from './Colours';
 
 export class Cookie {
   //TODO - Cookies have three attributes; name, colour, chocolateChipNum

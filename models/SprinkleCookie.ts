@@ -1,3 +1,5 @@
+import { Colours } from './Colours';
+
 export class SprinkleCookie {
   name: string;
   colour: Colours;
