@@ -69,6 +69,9 @@ function changeColour() {
     if (cookieSelectorValue === `Cookie${i + 1}`) {
       cookies[i].colour = cookieColourInput;
       break;
+    } else if (cookieSelectorValue === `SprinkleCookie${i + 1}`) {
+      cookies[i].colour = cookieColourInput;
+      break;
     }
   }
 
@@ -89,6 +92,9 @@ function addChocolateChip() {
 
   for (let i: number = 0; i < cookies.length; i++) {
     if (cookieSelectorValue === `Cookie${i + 1}`) {
+      cookies[i].chocolateChipNum++;
+      break;
+    } else if (cookieSelectorValue === `SprinkleCookie${i + 1}`) {
       cookies[i].chocolateChipNum++;
       break;
     }
@@ -129,11 +135,12 @@ createNewSprinkleCookieBtn.addEventListener('click', createNewSprinkleCookie);
 
 function createNewSprinkleCookie() {
   let SprinkleCookie1: SprinkleCookie = new SprinkleCookie(
-    `SprinkleCookie${sprinkleCookieCounter}`
+    `SprinkleCookie${cookieCounter}`
   );
   cookies.push(SprinkleCookie1);
 
-  sprinkleCookieCounter++;
+  cookieCounter++;
+  // sprinkleCookieCounter++;
 
   let addCookieOption: string;
   for (let i in cookies) {
