@@ -5,6 +5,7 @@ import { SprinkleCookie } from './models/Cookie';
 import { Colours } from './models/Cookie';
 
 // Create a array/list of cookies named cookies
+let cookieCounter: number = 3;
 let cookies: Cookie[] = [];
 init();
 
@@ -98,4 +99,24 @@ function updateDisplay() {
   drawCookies();
 }
 
-function createNewCookie() {}
+const createNewCookieBtn: HTMLButtonElement = <HTMLButtonElement>(
+  document.getElementById('createNewCookie-btn')
+);
+createNewCookieBtn.addEventListener('click', createNewCookie);
+
+function createNewCookie() {
+  let Cookie3: Cookie = new Cookie(`Cookie${cookieCounter}`);
+  cookies.push(Cookie3);
+
+  cookieCounter++;
+
+  let addCookieOption: string;
+  for (let i in cookies) {
+    addCookieOption += `<option value="${cookies[i].name}">${cookies[i].name}</option>`;
+  }
+
+  (document.getElementById('cookieSelector') as HTMLOptionElement).innerHTML =
+    addCookieOption;
+
+  updateDisplay();
+}
