@@ -1,8 +1,7 @@
 // Import stylesheets
 import './style.css';
 import { Cookie } from './models/Cookie';
-import { SprinkleCookie } from './models/Cookie';
-import { Colours } from './models/Cookie';
+import { SprinkleCookie } from './models/SprinkleCookie';
 
 // Create a array/list of cookies named cookies
 let cookieCounter: number = 3;

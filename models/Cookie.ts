@@ -1,10 +1,4 @@
-export enum Colours {
-  Brown = 'brown',
-  White = 'white',
-  Black = 'black',
-  Pink = 'pink',
-  Blue = 'blue',
-}
+import { Colours } from './models/Colours';
 
 export class Cookie {
   //TODO - Cookies have three attributes; name, colour, chocolateChipNum
@@ -18,19 +12,5 @@ export class Cookie {
     this.name = _name;
     this.colour = Colours.Brown;
     this.chocolateChipNum = 0;
-  }
-}
-
-export class SprinkleCookie {
-  name: string;
-  colour: Colours;
-  chocolateChipNum: number;
-  sprinkleColour: string;
-
-  constructor(_name: string) {
-    this.name = _name;
-    this.colour = Colours.Black;
-    this.chocolateChipNum = 0;
-    this.sprinkleColour = Colours.Pink;
   }
 }
