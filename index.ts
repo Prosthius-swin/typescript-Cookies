@@ -30,9 +30,8 @@ function init() {
     addCookieOption;
 
   // initialise the cookieColour-inp to the colour of the first cookie created
-  (
-    document.getElementById('cookieColour-inp') as HTMLInputElement
-  ).value = `${cookies[0].colour}`;
+  (document.getElementById('cookieColour-inp') as HTMLInputElement).value =
+    cookies[0].colour;
 
   updateDisplay();
 }
