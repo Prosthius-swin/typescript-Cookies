@@ -125,11 +125,11 @@ function createNewCookie() {
 const createNewSprinkleCookieBtn: HTMLButtonElement = <HTMLButtonElement>(
   document.getElementById('createNewSprinkleCookie-btn')
 );
-createNewSprinkleCookieBtn.addEventListener('click', createNewCookie);
+createNewSprinkleCookieBtn.addEventListener('click', createNewSprinkleCookie);
 
 function createNewSprinkleCookie() {
   let SprinkleCookie1: SprinkleCookie = new SprinkleCookie(
-    `SprinkleCookie${cookieCounter}`
+    `SprinkleCookie${sprinkleCookieCounter}`
   );
   cookies.push(SprinkleCookie1);
 
