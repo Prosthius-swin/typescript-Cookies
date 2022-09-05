@@ -31,5 +31,6 @@ export class SprinkleCookie {
     this.name = _name;
     this.colour = Colours.Black;
     this.chocolateChipNum = 0;
+    this.sprinkleColour = Colours.Pink;
   }
 }
